@@ -11,10 +11,10 @@ fun add(vararg persons: Any){
 
 
     // this call is ok
-    test(*persons)
-
-    // the method call will fail during the compilation
-    test(*(persons)[0] as Array<Person>)
+//    test(*persons)
+//
+//    // the method call will fail during the compilation
+//    test(*(persons)[0] as Array<Person>)
 }
 
 
