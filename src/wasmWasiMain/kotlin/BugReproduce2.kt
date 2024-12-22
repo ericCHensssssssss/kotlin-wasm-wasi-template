@@ -14,9 +14,9 @@ fun myTest() {
 
     val job = GlobalScope.launch() {
         while (true){
-            println("运行中22")
+            println("runing")
             delay(6000)
-            println("正在运行中，当前时间：")
+            println("it is runing：")
         }
 
     }
