@@ -1,3 +1,6 @@
+import kotlinx.coroutines.GlobalScope
+import kotlinx.coroutines.delay
+import kotlinx.coroutines.launch
 import kotlinx.datetime.Clock
 
 
@@ -6,10 +9,20 @@ import kotlinx.datetime.Clock
 @WasmExport
 fun myTest() {
 
-    val now = Clock.System.now()
-    println("the time is"+now)
+    println("the time is")
 
-  }
+
+    val job = GlobalScope.launch() {
+        while (true){
+            println("运行中22")
+            delay(6000)
+            println("正在运行中，当前时间：")
+        }
+
+    }
+
+
+}
 
 
 

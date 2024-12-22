@@ -1,15 +1,11 @@
 @file:OptIn(ExperimentalWasmDsl::class)
 
 import org.gradle.internal.os.OperatingSystem
-import de.undercouch.gradle.tasks.download.Download
 import org.jetbrains.kotlin.gradle.ExperimentalKotlinGradlePluginApi
 import org.jetbrains.kotlin.gradle.ExperimentalWasmDsl
 import org.jetbrains.kotlin.gradle.targets.js.nodejs.NodeJsExec
 import org.jetbrains.kotlin.gradle.targets.js.testing.KotlinJsTest
-import org.jetbrains.kotlin.gradle.tasks.KotlinCompile
-import org.jetbrains.kotlin.gradle.testing.internal.KotlinTestReport
-import java.nio.file.Files
-import java.util.Locale
+import java.util.*
 
 plugins {
     alias(libs.plugins.kotlinMultiplatform)
@@ -38,6 +34,8 @@ kotlin {
         commonMain{
             dependencies {
                 implementation("org.jetbrains.kotlinx:kotlinx-datetime:0.6.2-SNAPSHOT")
+                implementation("org.jetbrains.kotlinx:kotlinx-coroutines-core:1.9.0")
+
             }
            }
        wasmWasiMain {
